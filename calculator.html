@@ -1,0 +1,110 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		//function that display value
+		function dis(val)
+		{
+			document.getElementById("result").value+=val
+		}
+		
+		//function that evaluates the digit and return result
+		function solve()
+		{
+			let x = document.getElementById("result").value
+			let y = eval(x)
+			document.getElementById("result").value = y
+		}
+		
+		//function that clear the display
+		function clr()
+		{
+			document.getElementById("result").value = ""
+		}
+	</script>
+	<!-- for styling -->
+	<style>
+
+
+		body{
+                background:linear-gradient(rgba(0,0,0,0.5),#009688);
+                position:absolute;
+                top:80px;
+                left:500px;
+                background-attachment: fixed;
+                }
+
+		input[type="button"]
+		{
+		background-color:lightgrey;
+		color: black;
+                font-size:50px;
+                cursor:pointer;
+		border: solid black 2px;
+		width:100px;
+                height:100px;
+		}
+
+
+		input[type="text"]
+		{
+		background-color:#c81059;
+		border: solid #fff 2px;
+		width:310px;
+                height:100px;
+                font-size:50px;
+                color:#fff;
+		}
+
+                input:hover
+                {
+                color:#009688;
+                }
+  
+
+
+	</style>
+</head>
+<!-- create table -->
+<body>
+<div style="overflow-x:auto;">
+	
+	<table border="10" style="font-size:4vw;" >
+		<tr>
+			<td colspan="3"><input type="text" id="result"/></td>
+			<!-- clr() function will call clr to clear all value -->
+			<td><input type="button" value="c" style="font-size:4vw;" onclick="clr()"/> </td>
+		</tr>
+		<tr>
+			<!-- create button and assign value to each button -->
+			<!-- dis("1") will call function dis to display value -->
+			<td><input type="button" value="1" style="font-size:4vw;" onclick="dis('1')"/> </td>
+			<td><input type="button" value="2" style="font-size:4vw;" onclick="dis('2')"/> </td>
+			<td><input type="button" value="3" style="font-size:4vw;" onclick="dis('3')"/> </td>
+			<td><input type="button" value="/" style="font-size:4vw;" onclick="dis('/')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" style="font-size:4vw;" onclick="dis('4')"/> </td>
+			<td><input type="button" value="5" style="font-size:4vw;" onclick="dis('5')"/> </td>
+			<td><input type="button" value="6" style="font-size:4vw;" onclick="dis('6')"/> </td>
+			<td><input type="button" value="-" style="font-size:4vw;" onclick="dis('-')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" style="font-size:4vw;" onclick="dis('7')"/> </td>
+			<td><input type="button" value="8" style="font-size:4vw;" onclick="dis('8')"/> </td>
+			<td><input type="button" value="9" style="font-size:4vw;" onclick="dis('9')"/> </td>
+			<td><input type="button" value="+" style="font-size:4vw;" onclick="dis('+')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="." style="font-size:4vw;" onclick="dis('.')"/> </td>
+			<td><input type="button" value="0" style="font-size:4vw;" onclick="dis('0')"/> </td>
+			<!-- solve function call function solve to evaluate value -->
+			<td><input type="button" value="=" style="font-size:4vw;" onclick="solve()"/> </td>
+			<td><input type="button" value="*" style="font-size:4vw;" onclick="dis('*')"/> </td>
+		</tr>
+	</table>
+</div>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.5),#009688) ,url(https://www.dyspatch.io/wp-content/uploads/2020/09/gif-vs-video.gif); background-size: cover; background-position: center center">
+</body>
+</html>
